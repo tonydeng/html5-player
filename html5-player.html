@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>HTML5 Video Player</title>
+</head>
+<body>
+<h1>HTML5 Video Player</h1>
+<div id="viewArea">
+
+<video id="myVideo" controls="true">
+    <source src="http://202.102.74.55/youku/6771C7F4941388174736D96100/030020010054E73735624E0293CB17E7374CB5-231F-68DE-4664-56CAE41D8651.mp4" type="video/mp4">
+    <p>请在支持video标签的浏览器中播放</p>
+</video>
+</div>
+<div id="ctrl">
+<button type="button" onclick="playPause()">播放/暂停</button>
+<button type="button" onclick="makeBig()">放大</button>
+<button type="button" onclick="makeSmall()">缩小</button>
+<button type="button" onclick="makeNormal()">正常</button>
+<button type="button" onclick="slowPlay()">慢放</button>
+<button type="button" onclick="normalPlay()">正常播放</button>
+<button type="button" onclick="highPlay()">快放</button>
+<div id=”ctime”>播放时间：0秒</div><br>
+<div id=”speed”>1倍速</div><br>
+<div id="slider"></div>
+</div>
+<script type="text/javascript" charset="utf-8">
+    var myVideo=document.getElementById("myVideo");
+    function playPause(){
+        if (myVideo.paused)
+          myVideo.play();
+        else
+          myVideo.pause();
+    }
+    function makeBig(){
+        myVideo.width=1060;
+    }
+
+    function makeSmall(){
+        myVideo.width=320;
+    }
+
+    function makeNormal(){
+        myVideo.width=620;
+    }
+    function slowPlay () {
+        myVideo.playbackRate=0.5;
+    }
+    function normalPlay () {
+        myVideo.playbackRate=1.0;
+    }
+    function highPlay () {
+        myVideo.playbackRate=1.5;
+    }
+</script>
+</body>
+</html>
