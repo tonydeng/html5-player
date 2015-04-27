@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>如何使用VideoJS</title>
+    <!--<script type="text/javascript" src="html5media.min.js"></script>-->
+
+     <!-- 加载 VideoJS js -->
+    <script src="video.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 皮肤 -->
+    <link rel="stylesheet" href="video-js.css" type="text/css" media="screen" title="Video JS">
+    <!-- flowplayer-->
+
+    <!-- flowplayer-->
+    <script type="text/javascript">
+
+
+    </script>
+
+
+</head>
+<body>
+
+<!-- Begin VideoJS -->
+<div class="video-js-box" style="margin:20px auto">
+    <!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
+    <video id="example_video_1" class="video-js" width="640" height="264" controls="controls" preload="auto" poster="http://video-js.zencoder.com/oceans-clip.png">
+        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm; codecs="vp8, vorbis"' />
+        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg; codecs="theora, vorbis"' />
+        <!-- 如果浏览器不兼容HTML5则使用flash播放 -->
+        <object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="264"
+                type="application/x-shockwave-flash"
+                data="flowplayer-3.2.1.swf">
+            <param name="movie" value="flowplayer-3.2.1.swf" />
+            <param name="allowfullscreen" value="true" />
+            <param name="flashvars"
+                   value='config={"playlist":["http://video-js.zencoder.com/oceans-clip.png",
+                    {"url": "http://video-js.zencoder.com/oceans-clip.mp4","autoPlay":false,
+                    "autoBuffering":true}]}' />
+            <!-- 视频图片. -->
+            <img src="http://video-js.zencoder.com/oceans-clip.png" width="640" height="264"
+                 alt="Poster Image"
+                 title="No video playback capabilities." />
+        </object>
+    </video>
+    <!-- 这里是几个源文件的下载地址 -->
+    <p class="vjs-no-video"><strong>Download Video:</strong>
+        <a href="http://video-js.zencoder.com/oceans-clip.mp4">MP4</a>,
+        <a href="http://video-js.zencoder.com/oceans-clip.webm">WebM</a>,
+        <a href="http://video-js.zencoder.com/oceans-clip.ogv">Ogg</a><br>
+        <!-- Support VideoJS by keeping this link. -->
+        <a href="http://videojs.com">HTML5 Video Player</a> by VideoJS
+    </p>
+</div>
+<!-- End VideoJS -->
+
+
+
+    <!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="280" height="210">-->
+        <!--<param name="movie" value="flowplayer-3.2.1.swf" />-->
+        <!--<param name="quality" value="high" />-->
+        <!--<param name="bgcolor" value="#ffffff" />-->
+        <!--<param name="play" value="true" />-->
+        <!--<param name="loop" value="true" />-->
+        <!--<param name="wmode" value="transparent" />-->
+        <!--<param name="scale" value="showall" />-->
+        <!--<param name="menu" value="true" />-->
+        <!--<param value="true" name="allowfullscreen" />-->
+        <!--<param name="devicefont" value="false" />-->
+        <!--<param name="salign" value="" />-->
+        <!--<param name="allowScriptAccess" value="sameDomain" />-->
+        <!--<param name="flashvars" value="isShowRelatedVideo=false&showAd=0&show_pre=1&show_next=1&isAutoPlay=false&isDebug=false&UserID=&winType=interior&playMovie=true&MMControl=false&MMout=false&RecordCode=1001,1002,1003,1004,1005,1006,2001,3001,3002,3003,3004,3005,3007,3008,9999"/>-->
+        <!--<embed height="210" align="middle" width="280" pluginspage="http://www.macromedia.com/go/getflashplayer"-->
+               <!--type="application/x-shockwave-flash" name="aprilfools"-->
+               <!--flashvars="isShowRelatedVideo=false&showAd=0&show_pre=1&show_next=1&isAutoPlay=false&isDebug=false&UserID=&winType=interior&playMovie=true&MMControl=false&MMout=false&RecordCode=1001,1002,1003,1004,1005,1006,2001,3001,3002,3003,3004,3005,3007,3008,9999"-->
+               <!--src="flowplayer-3.2.1.swf"-->
+               <!--menu="true" play="true" allowfullscreen="true" allowscriptaccess="sameDomain" quality="high" wmode="transparent" bgcolor="#fff" ver="10.0.0"></embed>-->
+    <!--</object>-->
+<!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"-->
+        <!--width="640" height="480" id="VideoPlayer" align="middle"> <param name="allowScriptAccess" value="*" />-->
+    <!--<param name="allowFullScreen" value="true" />-->
+    <!--<param name="movie" value="FLVPlayer.swf?video=test2.mp4&autoplay=true" />-->
+    <!--<param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />-->
+    <!--<embed src="FLVPlayer.swf?video=test2.mp4&autoplay=true"-->
+           <!--quality="high" bgcolor="#000000" width="640" height="480" name="VideoPlayer" align="middle" allowScriptAccess="*" allowFullScreen="true"-->
+           <!--type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />-->
+<!--</object>-->
+
+<!--<div class="skin" id="minimalist">-->
+
+    <!--<hgroup class="title">-->
+        <!--<h1>Minimalist</h1>-->
+        <!--<h2>Graphic. Powerful. Focused.</h2>-->
+    <!--</hgroup>-->
+
+    <!--<div data-ratio="0.4167" class="flowplayer is-splash main minimalist">-->
+        <!--<video>-->
+
+            <!--<source type="video/webm"-->
+                    <!--src="http://stream.flowplayer.org/bauhaus.webm">-->
+            <!--<source type="video/mp4"-->
+                    <!--src="http://stream.flowplayer.org/bauhaus.mp4">-->
+            <!--<source type="video/flash"-->
+                    <!--src="mp4:bauhaus"></video>-->
+    <!--</div>-->
+<!--</div>-->
+</body>
+</html>
