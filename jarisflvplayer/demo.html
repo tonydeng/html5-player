@@ -23,9 +23,16 @@
                     break;
             }
         }
-        function makeBig(caller){
+        function goforward(caller){
+            var time=player.getCurrentTime()+1;
+            console.log(time);
+            player.seek(time);
         }
-        function makeSmall(caller){}
+        function goback(caller){
+            var time=player.getCurrentTime()-1;
+            console.log(time);
+            player.seek(time);
+        }
         function makeNormalSize(caller){}
         //慢放
         function slowPlay(caller){
@@ -88,13 +95,13 @@
             float: left; border: solid 1px #fff; color: #fff;
             background-color: #6D90A5" id="btnPlay"
                     onclick="togglePlay(this)" >Play</button>
-            <!--<button style="padding: 5px 0 5px 0; display: block;-->
-        <!--float: left;border: solid 1px #fff; color: #fff;-->
-        <!--background-color: #6D90A5"  id="btnBig" onclick="makeBig(this)" >放大</button>-->
+            <button style="padding: 5px 0 5px 0; display: block;
+        float: left;border: solid 1px #fff; color: #fff;
+        background-color: #6D90A5"  id="btnBig" onclick="goforward(this)" >快进</button>
 
-            <!--<button style="padding: 5px 0 5px 0; display: block;-->
-        <!--float: left;border: solid 1px #fff; color: #fff;-->
-        <!--background-color: #6D90A5"  id="btnSmall" onclick="makeSmall(this)" >缩小</button>-->
+            <button style="padding: 5px 0 5px 0; display: block;
+        float: left;border: solid 1px #fff; color: #fff;
+        background-color: #6D90A5"  id="btnSmall" onclick="goback(this)" >快退</button>
 
             <!--<button style="padding: 5px 0 5px 0; display: block;-->
         <!--float: left;border: solid 1px #fff; color: #fff;-->
