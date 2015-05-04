@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script type="text/javascript" src="js/jarisflvplayer.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/swfobject.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        player = new JarisFLVPlayer("playerObject");
+        //播放暂停
+        function togglePlay(caller)
+        {
+            switch(caller.innerHTML)
+            {
+                case "Pause":
+                    caller.innerHTML = "Play";
+                    player.pause();
+                    break;
+                case "Play":
+                    caller.innerHTML = "Pause";
+                    player.play();
+                    break;
+            }
+        }
+        function makeBig(caller){
+        }
+        function makeSmall(caller){}
+        function makeNormalSize(caller){}
+        //慢放
+        function slowPlay(caller){
+        }
+        function quickPlay(caller){
+        }
+        function normalPlay(caller){}
+
+
+        function addEvents()
+        {
+            player.addListener(JarisFLVPlayer.event.TIME, "onTime");
+            player.addListener(JarisFLVPlayer.event.PLAYBACK_FINISHED, "onPlayBackFinished");
+        }
+
+        function onTime(data)
+        {
+            document.getElementById("seconds").innerHTML = player.getCurrentTime();
+        }
+
+        function onPlayBackFinished(data)
+        {
+            alert("playback has finished!");
+        }
+
+
+
+        //Create a timer with 500 miliseconds of delay to be sure the player has loaded before adding events
+        add_listener_timer = setTimeout("addEvents()", 500);
+    </script>
+</head>
+<body>
+<div>
+    <object
+            width="576" height="360"
+            id="playerObject"
+            data="JarisFLVPlayer.swf"
+            type="application/x-shockwave-flash"
+            >
+        <param name="allowFullscreen" value="true">
+        <param name="allowScriptAccess" value="always">
+        <param name="movie" value="JarisFLVPlayer.swf">
+        <param name="bgcolor" value="#000000">
+        <param name="quality" value="high">
+        <param name="scale" value="noscale">
+        <param name="wmode" value="opaque">
+        <param name="flashvars"
+               value="source=http://localhost:8080/examples/h5/test.flv&type=video&duration=52&streamtype=file&poster=poster.png&autostart=false&hardwarescaling=false&controls=false&jsapi=1">
+
+
+            <!--<param name="flashvars" value="source=http://jaris.sourceforge.net/files/jaris-intro.flv&type=video&duration=52&streamtype=file&poster=/images/poster.png&autostart=false&logo=/images/logo.png&logoposition=top left&logoalpha=30&logowidth=130&logolink=http://jaris.sourceforge.net&hardwarescaling=false&controls=false&jsapi=1">-->
+
+            <param name="seamlesstabbing" value="false">
+        </object>
+
+        <div style="clear: both"></div>
+
+        <div style="width: 576px; background-color: #263843">
+            <button style="padding: 5px 0 5px 0; display: block;
+            float: left; border: solid 1px #fff; color: #fff;
+            background-color: #6D90A5" id="btnPlay"
+                    onclick="togglePlay(this)" >Play</button>
+            <!--<button style="padding: 5px 0 5px 0; display: block;-->
+        <!--float: left;border: solid 1px #fff; color: #fff;-->
+        <!--background-color: #6D90A5"  id="btnBig" onclick="makeBig(this)" >放大</button>-->
+
+            <!--<button style="padding: 5px 0 5px 0; display: block;-->
+        <!--float: left;border: solid 1px #fff; color: #fff;-->
+        <!--background-color: #6D90A5"  id="btnSmall" onclick="makeSmall(this)" >缩小</button>-->
+
+            <!--<button style="padding: 5px 0 5px 0; display: block;-->
+        <!--float: left;border: solid 1px #fff; color: #fff;-->
+        <!--background-color: #6D90A5"  id="btnNormalSize" onclick="makeNormalSize(this)" >正常</button>-->
+
+            <!--<button style="padding: 5px 0 5px 0; display: block;-->
+        <!--float: left;border: solid 1px #fff; color: #fff;-->
+        <!--background-color: #6D90A5"  id="btnSlow" onclick="slowPlay(this)" >慢放</button>-->
+
+            <!--<button style="padding: 5px 0 5px 0; display: block;-->
+        <!--float: left;border: solid 1px #fff; color: #fff;-->
+        <!--background-color: #6D90A5"  id="btnQuick" onclick="quickPlay(this)" >快放</button>-->
+
+            <!--<button style="padding: 5px 0 5px 0; display: block;-->
+        <!--float: left;border: solid 1px #fff; color: #fff;-->
+        <!--background-color: #6D90A5"  id="btnNormalPlay" onclick="normalPlay(this)" >正常播放</button>-->
+
+            <span style="padding: 5px; display: block; float: right; color: #fff; font-weight: bold" id="seconds"></span>
+            <div style="clear: both"></div>
+        </div>
+</div>
+
+
+
+
+</body>
+</html>
